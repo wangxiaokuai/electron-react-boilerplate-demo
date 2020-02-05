@@ -9,7 +9,8 @@ type Props = {
   incrementIfOdd: () => void,
   incrementAsync: () => void,
   decrement: () => void,
-  counter: number
+  counter: number,
+  imageList: any
 };
 
 export default class Counter extends Component<Props> {
@@ -21,7 +22,8 @@ export default class Counter extends Component<Props> {
       incrementIfOdd,
       incrementAsync,
       decrement,
-      counter
+      counter,
+      imageList
     } = this.props;
     return (
       <div>
@@ -33,6 +35,7 @@ export default class Counter extends Component<Props> {
         <div className={`counter ${styles.counter}`} data-tid="counter">
           {counter}
         </div>
+        <p>{imageList.join(' ')}</p>
         <div className={styles.btnGroup}>
           <button
             className={styles.btn}
