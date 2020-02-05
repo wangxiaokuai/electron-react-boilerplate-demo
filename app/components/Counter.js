@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { readdirSync } from 'fs';
 import styles from './Counter.css';
 import routes from '../constants/routes.json';
 
@@ -17,6 +18,9 @@ export default class Counter extends Component<Props> {
   props: Props;
 
   render() {
+    const ret = readdirSync('/Users/cayla/Project');
+    console.log('ret: ', ret);
+
     const {
       increment,
       incrementIfOdd,
